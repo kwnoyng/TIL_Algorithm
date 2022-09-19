@@ -60,3 +60,38 @@ public class Solution {
 		}
 	}
 }
+
+/*  비트마스킹 구현
+ * 
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int tc = Integer.parseInt(br.readLine());
+		for (int t = 1; t <= tc; t++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int N = Integer.parseInt(st.nextToken());
+			int L = Integer.parseInt(st.nextToken());
+			int[][] arr = new int[N][2];
+			for (int i = 0; i < N; i++) {
+				st = new StringTokenizer(br.readLine());
+				arr[i][0] = Integer.parseInt(st.nextToken());
+				arr[i][1] = Integer.parseInt(st.nextToken());
+			}
+
+			int ans = 0;
+			for (int i = 0; i < (1 << N); i++) {
+				int score = 0;
+				int cal = 0;
+				for (int j = 0; j < N; j++) {
+					if ((i & (1 << j)) > 0) {
+						score += arr[j][0];
+						cal += arr[j][1];
+					}
+				}
+				if (cal <= L)
+					ans = Math.max(ans, score);
+			}
+
+			System.out.printf("#%d %d\n", t, ans);
+		}
+	}
+*/
